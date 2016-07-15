@@ -84,7 +84,7 @@ namespace CursoConsole
                         {
                             if (item.nome.Equals(nomeAux))
                                 Console.WriteLine("Achei!");
-                                Console.WriteLine("Nome: "+ item.nome + " Endereço: " + item.endereco);
+                                Console.WriteLine("Nome: "+ item.nome + ", Endereço: " + item.endereco + ", Sexo: " + item.sexo);
                                 
                             
                         }
@@ -140,11 +140,13 @@ namespace CursoConsole
                     else if (operacao.Equals(3))
                     {
                         Console.WriteLine("Informe codigo do produto: ");
-                        String descAux = Console.ReadLine();
+                        int descAux = Convert.ToInt32(Console.ReadLine());
                         foreach (Produto item in ListPrd)
                         {
-                            if (item.descricao.Equals(descAux))
-                                Console.WriteLine("Achei {0}!", item.descricao);
+                            if (item.codigo.Equals(descAux))
+                                //Console.WriteLine("Achei {0}!", item.codigo);
+                                Console.WriteLine("Achei ");
+                            Console.WriteLine("Codigo: " + item.codigo + ", descrição: " + item.descricao + ", Valor: " + item.valor);
                         }
                         Console.ReadKey();
                     }
